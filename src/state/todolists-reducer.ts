@@ -101,7 +101,6 @@ export const setTodoList = (todos: TodolistType[]) => {
 export type SetTodoListType = ReturnType<typeof setTodoList>
 
 export const getTodoTC = () => (dispatch: Dispatch)=> {
-    debugger
     todolistsAPI.getTodolists().then((res) => {
         const data = res.data
         dispatch(setTodoList(data))
